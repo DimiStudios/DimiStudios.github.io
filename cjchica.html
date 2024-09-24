@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Caja Chica</title>
+    <link rel="stylesheet" href="stylecj.css">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img class="m-0 display-4" src="img/logoborde.png" alt="" style="width: 400px; height: fit-content;">
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-white border-bottom d-none d-lg-flex">
+                    <div class="col-lg-7 text-left">
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                            <i class="fa fa-envelope text-primary mr-2"></i>
+                            <small>transmarr@gmail.com</small>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="fa fa-phone-alt text-primary mr-2"></i>
+                            <small>+51 976 332 240</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center p-2">
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <img class="m-0 display-4" src="img/TRANSMARR-LOGOSINFONDO.png" alt="" style="width: 300px; height: auto;">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Inicio</a>
+                            <a href="cjchica.html" class="nav-item nav-link active">Recursos</a>
+
+                            <!--
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="service.html" class="nav-item nav-link">Practice</a>
+                            <a href="team.html" class="nav-item nav-link">Attorneys</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="#" class="dropdown-item">Menu Item 1</a>
+                                    <a href="#" class="dropdown-item">Menu Item 2</a>
+                                    <a href="#" class="dropdown-item">Menu Item 3</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            -->
+                        </div>
+                        <a href="" class="btn btn-primary mr-3 d-none d-lg-block">CONTÁCTANOS</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Sistema de Caja Chica</h2>
+        <form id="transactionForm" method="post" action="process_form.php">
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" name="date">
+            <label for="amount">Monto:</label>
+            <input type="number" id="amount" name="amount" required>
+            <label for="type">Tipo:</label>
+            <select id="type" name="type">
+                <option value="Ingreso">Ingreso</option>
+                <option value="Egreso">Egreso</option>
+            </select>
+            <label for="reason">Razón:</label>
+            <input type="text" id="reason" name="reason">
+            <label for="invoice">Número de Factura:</label>
+            <input type="text" id="invoice" name="invoice" pattern="[a-zA-Z0-9]{3,}" title="Ingrese al menos 3 caracteres, letras y números">
+            <label for="plate">Número de Placa:</label>
+            <input type="text" id="plate" name="plate" pattern="[a-zA-Z0-9]{3,}" title="Ingrese al menos 3 caracteres, letras y números">
+            <label for="provider">Proveedor:</label>
+            <input type="text" id="provider" name="provider">
+            <input type="submit" value="Agregar Transacción">
+        </form>
+        <h3>Resumen de Transacciones</h3>
+        <table id="transactionTable">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Monto</th>
+                    <th>Tipo</th>
+                    <th>Razón</th>
+                    <th>Número de Factura</th>
+                    <th>Número de Placa</th>
+                    <th>Proveedor</th>
+                </tr>
+            </thead>
+            <tbody id="transactionList">
+                <!-- Aquí se llenarán dinámicamente los registros -->
+            </tbody>
+        </table>
+        <div id="summary">
+            <p><strong>Ingresos Totales:</strong> <span id="totalIncome">0</span></p>
+            <p><strong>Egresos Totales:</strong> <span id="totalExpense">0</span></p>
+            <p><strong>Saldo:</strong> <span id="overallAmount">0</span></p>
+        </div>
+        <button id="generateReportBtn">Generar Reporte Excel</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
